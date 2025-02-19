@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HSK1 Review (Lessons 1-5)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>🎉 HSK1 Review (Lessons 1-5) 🎉</h1>
+    <button onclick="startReview()">Start Review</button>
+
+    <div id="review-section" style="display: none;">
+
+      <!-- 词语和拼音匹配 -->
+      <section id="vocab-pinyin-matching">
+        <h2>📚 Vocabulary & Pinyin Matching</h2>
+        <p>Match the Chinese words with their correct Pinyin.</p>
+        <div class="matching-container">
+          <ul id="words">
+            <li draggable="true" class="draggable" id="你">你</li>
+            <li draggable="true" class="draggable" id="好">好</li>
+            <li draggable="true" class="draggable" id="您">您</li>
+            <li draggable="true" class="draggable" id="你们">你们</li>
+            <li draggable="true" class="draggable" id="对不起">对不起</li>
+            <li draggable="true" class="draggable" id="没关系">没关系</li>
+            <li draggable="true" class="draggable" id="谢谢">谢谢</li>
+            <li draggable="true" class="draggable" id="不">不</li>
+            <li draggable="true" class="draggable" id="不客气">不客气</li>
+            <li draggable="true" class="draggable" id="再见">再见</li>
+            <li draggable="true" class="draggable" id="叫">叫</li>
+            <li draggable="true" class="draggable" id="什么">什么</li>
+            <li draggable="true" class="draggable" id="名字">名字</li>
+            <li draggable="true" class="draggable" id="我">我</li>
+            <li draggable="true" class="draggable" id="是">是</li>
+            <li draggable="true" class="draggable" id="老师">老师</li>
+            <li draggable="true" class="draggable" id="吗">吗</li>
+            <li draggable="true" class="draggable" id="学生">学生</li>
+            <li draggable="true" class="draggable" id="人">人</li>
+            <li draggable="true" class="draggable" id="中国">中国</li>
+            <li draggable="true" class="draggable" id="美国">美国</li>
+            <li draggable="true" class="draggable" id="她">她</li>
+            <li draggable="true" class="draggable" id="谁">谁</li>
+            <li draggable="true" class="draggable" id="的">的</li>
+            <li draggable="true" class="draggable" id="汉语">汉语</li>
+            <li draggable="true" class="draggable" id="哪">哪</li>
+            <li draggable="true" class="draggable" id="国">国</li>
+            <li draggable="true" class="draggable" id="呢">呢</li>
+            <li draggable="true" class="draggable" id="他">他</li>
+            <li draggable="true" class="draggable" id="同学">同学</li>
+            <li draggable="true" class="draggable" id="朋友">朋友</li>
+            <li draggable="true" class="draggable" id="家">家</li>
+            <li draggable="true" class="draggable" id="有">有</li>
+            <li draggable="true" class="draggable" id="口">口</li>
+            <li draggable="true" class="draggable" id="女儿">女儿</li>
+            <li draggable="true" class="draggable" id="几">几</li>
+            <li draggable="true" class="draggable" id="岁">岁</li>
+            <li draggable="true" class="draggable" id="了">了</li>
+            <li draggable="true" class="draggable" id="今年">今年</li>
+            <li draggable="true" class="draggable" id="多">多</li>
+            <li draggable="true" class="draggable" id="大">大</li>
+          </ul>
+          <ul id="pinyin">
+            <li class="droppable" data-match="你">nǐ</li>
+            <li class="droppable" data-match="好">hǎo</li>
+            <li class="droppable" data-match="您">nín</li>
+            <li class="droppable" data-match="你们">nǐmen</li>
+            <li class="droppable" data-match="对不起">duìbuqǐ</li>
+            <li class="droppable" data-match="没关系">méiguānxi</li>
+            <li class="droppable" data-match="谢谢">xièxiè</li>
+            <li class="droppable" data-match="不">bù</li>
+            <li class="droppable" data-match="不客气">bù kèqì</li>
+            <li class="droppable" data-match="再见">zàijiàn</li>
+            <li class="droppable" data-match="叫">jiào</li>
+            <li class="droppable" data-match="什么">shénme</li>
+            <li class="droppable" data-match="名字">míngzi</li>
+            <li class="droppable" data-match="我">wǒ</li>
+            <li class="droppable" data-match="是">shì</li>
+            <li class="droppable" data-match="老师">lǎoshī</li>
+            <li class="droppable" data-match="吗">ma</li>
+            <li class="droppable" data-match="学生">xuéshēng</li>
+            <li class="droppable" data-match="人">rén</li>
+            <li class="droppable" data-match="中国">Zhōngguó</li>
+            <li class="droppable" data-match="美国">Měiguó</li>
+            <li class="droppable" data-match="她">tā</li>
+            <li class="droppable" data-match="谁">shéi</li>
+            <li class="droppable" data-match="的">de</li>
+            <li class="droppable" data-match="汉语">hànyǔ</li>
+            <li class="droppable" data-match="哪">nǎ</li>
+            <li class="droppable" data-match="国">guó</li>
+            <li class="droppable" data-match="呢">ne</li>
+            <li class="droppable" data-match="他">tā</li>
+            <li class="droppable" data-match="同学">tóngxué</li>
+            <li class="droppable" data-match="朋友">péngyǒu</li>
+            <li class="droppable" data-match="家">jiā</li>
+            <li class="droppable" data-match="有">yǒu</li>
+            <li class="droppable" data-match="口">kǒu</li>
+            <li class="droppable" data-match="女儿">nǚ'ér</li>
+            <li class="droppable" data-match="几">jǐ</li>
+            <li class="droppable" data-match="岁">suì</li>
+            <li class="droppable" data-match="了">le</li>
+            <li class="droppable" data-match="今年">jīnnián</li>
+            <li class="droppable" data-match="多">duō</li>
+            <li class="droppable" data-match="大">dà</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 词汇匹配 -->
+      <section id="vocab-matching">
+        <h2>📚 Vocabulary Matching</h2>
+        <p>Match the Chinese words with their English meanings.</p>
+        <div class="matching-container">
+          <ul id="words">
+            <li draggable="true" class="draggable" id="你">你</li>
+            <li draggable="true" class="draggable" id="好">好</li>
+            <li draggable="true" class="draggable" id="您">您</li>
+            <li draggable="true" class="draggable" id="你们">你们</li>
+            <li draggable="true" class="draggable" id="对不起">对不起</li>
+            <li draggable="true" class="draggable" id="没关系">没关系</li>
+            <li draggable="true" class="draggable" id="谢谢">谢谢</li>
+            <li draggable="true" class="draggable" id="不">不</li>
+            <li draggable="true" class="draggable" id="不客气">不客气</li>
+            <li draggable="true" class="draggable" id="再见">再见</li>
+            <li draggable="true" class="draggable" id="叫">叫</li>
+            <li draggable="true" class="draggable" id="什么">什么</li>
+            <li draggable="true" class="draggable" id="名字">名字</li>
+            <li draggable="true" class="draggable" id="我">我</li>
+            <li draggable="true" class="draggable" id="是">是</li>
+            <li draggable="true" class="draggable" id="老师">老师</li>
+            <li draggable="true" class="draggable" id="吗">吗</li>
+            <li draggable="true" class="draggable" id="学生">学生</li>
+            <li draggable="true" class="draggable" id="人">人</li>
+            <li draggable="true" class="draggable" id="中国">中国</li>
+            <li draggable="true" class="draggable" id="美国">美国</li>
+            <li draggable="true" class="draggable" id="她">她</li>
+            <li draggable="true" class="draggable" id="谁">谁</li>
+            <li draggable="true" class="draggable" id="的">的</li>
+            <li draggable="true" class="draggable" id="汉语">汉语</li>
+            <li draggable="true" class="draggable" id="哪">哪</li>
+            <li draggable="true" class="draggable" id="国">国</li>
+            <li draggable="true" class="draggable" id="呢">呢</li>
+            <li draggable="true" class="draggable" id="他">他</li>
+            <li draggable="true" class="draggable" id="同学">同学</li>
+            <li draggable="true" class="draggable" id="朋友">朋友</li>
+            <li draggable="true" class="draggable" id="家">家</li>
+            <li draggable="true" class="draggable" id="有">有</li>
+            <li draggable="true" class="draggable" id="口">口</li>
+            <li draggable="true" class="draggable" id="女儿">女儿</li>
+            <li draggable="true" class="draggable" id="几">几</li>
+            <li draggable="true" class="draggable" id="岁">岁</li>
+            <li draggable="true" class="draggable" id="了">了</li>
+            <li draggable="true" class="draggable" id="今年">今年</li>
+            <li draggable="true" class="draggable" id="多">多</li>
+            <li draggable="true" class="draggable" id="大">大</li>
+          </ul>
+          <ul id="meanings">
+            <li class="droppable" data-match="你">You</li>
+            <li class="droppable" data-match="好">Good</li>
+            <li class="droppable" data-match="您">You (polite)</li>
+            <li class="droppable" data-match="你们">You (plural)</li>
+            <li class="droppable" data-match="对不起">Sorry</li>
+            <li class="droppable" data-match="没关系">It’s okay</li>
+            <li class="droppable" data-match="谢谢">Thank you</li>
+            <li class="droppable" data-match="不">No</li>
+            <li class="droppable" data-match="不客气">You’re welcome</li>
+            <li class="droppable" data-match="再见">Goodbye</li>
+            <li class="droppable" data-match="叫">To be called</li>
+            <li class="droppable" data-match="什么">What</li>
+            <li class="droppable" data-match="名字">Name</li>
+            <li class="droppable" data-match="我">I, me</li>
+            <li class="droppable" data-match="是">To be</li>
+            <li class="droppable" data-match="老师">Teacher</li>
+            <li class="droppable" data-match="吗">Question particle</li>
+            <li class="droppable" data-match="学生">Student</li>
+            <li class="droppable" data-match="人">Person</li>
+            <li class="droppable" data-match="中国">China</li>
+            <li class="droppable" data-match="美国">USA</li>
+            <li class="droppable" data-match="她">She</li>
+            <li class="droppable" data-match="谁">Who</li>
+            <li class="droppable" data-match="的">Possessive particle</li>
+            <li class="droppable" data-match="汉语">Chinese (language)</li>
+            <li class="droppable" data-match="哪">Which</li>
+            <li class="droppable" data-match="国">Country</li>
+            <li class="droppable" data-match="呢">Question particle</li>
+            <li class="droppable" data-match="他">He</li>
+            <li class="droppable" data-match="同学">Classmate</li>
+            <li class="droppable" data-match="朋友">Friend</li>
+            <li class="droppable" data-match="家">Home</li>
+            <li class="droppable" data-match="有">Have</li>
+            <li class="droppable" data-match="口">Mouth (used for counting family members)</li>
+            <li class="droppable" data-match="女儿">Daughter</li>
+            <li class="droppable" data-match="几">How many</li>
+            <li class="droppable" data-match="岁">Age</li>
+            <li class="droppable" data-match="了">Particle (indicating a change of state)</li>
+            <li class="droppable" data-match="今年">This year</li>
+            <li class="droppable" data-match="多">Many, much</li>
+            <li class="droppable" data-match="大">Big, large</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 对话匹配 -->
+      <section id="dialog-matching">
+        <h2>💬 Dialogue Matching</h2>
+        <p>Match the question with the correct response.</p>
+        <div class="matching-container">
+          <ul id="questions">
+            <li draggable="true" class="draggable" id="你好">你好。</li>
+            <li draggable="true" class="draggable" id="您好吗">您好。</li>
+            <li draggable="true" class="draggable" id="你叫什么名字">你叫什么名字？</li>
+            <li draggable="true" class="draggable" id="你是老师吗">你是老师吗？</li>
+            <li draggable="true" class="draggable" id="你是中国人吗">你是中国人吗？</li>
+            <li draggable="true" class="draggable" id="她是谁">她是谁？</li>
+            <li draggable="true" class="draggable" id="你家有几口人">你家有几口人？</li>
+          </ul>
+          <ul id="answers">
+            <li class="droppable" data-match="你好">你好。</li>
+            <li class="droppable" data-match="您好">您好。</li>
+            <li class="droppable" data-match="你叫什么名字">我叫李月。</li>
+            <li class="droppable" data-match="你是老师吗">我不是老师，我是学生。</li>
+            <li class="droppable" data-match="你是中国人吗">我不是中国人，我是美国人。</li>
+            <li class="droppable" data-match="她是谁">她是我的汉语老师，她叫李月。</li>
+            <li class="droppable" data-match="你家有几口人">我家有三口人。</li>
+          </ul>
+        </div>
+
+
+        <!-- 数字理解 -->
+        <section id="number-comprehension">
+          <h2>🔢 Number Comprehension</h2>
+          <p>Listen to the number and choose the correct Chinese character or number that matches.</p>
+          <div class="number-comprehension-container">
+            <p>1. What is the Chinese character for the number 5?</p>
+            <select id="number-q1">
+              <option value="一">一</option>
+              <option value="二">二</option>
+              <option value="五">五</option>
+            </select>
+
+            <p>2. What is the number for the character "九"?</p>
+            <select id="number-q2">
+              <option value="3">3</option>
+              <option value="9">9</option>
+              <option value="7">7</option>
+            </select>
+
+            <p>3. What is the Chinese character for the number 7?</p>
+            <select id="number-q3">
+              <option value="七">七</option>
+              <option value="六">六</option>
+              <option value="八">八</option>
+            </select>
+
+            <p>4. What is the number for the character "六"?</p>
+            <select id="number-q4">
+              <option value="6">6</option>
+              <option value="8">8</option>
+              <option value="4">4</option>
+            </select>
+
+            <p>5. What is the Chinese character for the number 2?</p>
+            <select id="number-q5">
+              <option value="三">三</option>
+              <option value="二">二</option>
+              <option value="五">五</option>
+            </select>
+          </div>
+
+          <!-- 新增的数字和拼音匹配部分 -->
+          <h2>🔢 Number & Pinyin Matching</h2>
+          <p>Match the Chinese numbers with their correct Pinyin.</p>
+          <div class="matching-container">
+            <ul id="numbers">
+              <li>一</li>
+              <li>二</li>
+              <li>三</li>
+              <li>四</li>
+              <li>五</li>
+            </ul>
+
+            <ul id="pinyin-numbers">
+              <li>èr</li>
+              <li>wǔ</li>
+              <li>sān</li>
+              <li>sì</li>
+              <li>yī</li>
+            </ul>
+          </div>
+        </section>
+
+        <button onclick="submitReview()">Submit</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

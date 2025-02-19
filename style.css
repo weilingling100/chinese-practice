@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.matching-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 20px;
+}
+
+li {
+  padding: 10px;
+  margin: 5px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  text-align: center;
+}
+
+.draggable {
+  background-color: #87CEEB;
+}
+
+.droppable {
+  background-color: #FFA07A;
+}
+
+.correct {
+  background-color: #90EE90 !important;
+}
+
+.wrong {
+  background-color: #FF6347 !important;
+}
